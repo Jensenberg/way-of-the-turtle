@@ -48,13 +48,13 @@
 
 海龟交易系统的简单版本，仅考虑滑点的影响和开盘价的影响
 
-![Turtle20(0.0030)](E:\GitHub\way-of-the-turtle\Turtle20(0.0030).png)
+![Turtle20(0.0030)](https://github.com/Jensenberg/way-of-the-turtle/blob/master/data/Turtle20(0.0030).png)
 
 ### turtle_class.py & turtle_complex.py
 
 海龟交易系统的复杂版本，考虑了移动止损，多翻空和空翻多
 
-![Turtle55(0.0050 1 6 2 4)](E:\GitHub\way-of-the-turtle\Turtle55(0.0050 1 6 2 4).png)
+![Turtle55(0.0050 1 6 2 4)](https://github.com/Jensenberg/way-of-the-turtle/blob/master/data/Turtle55(0.0050%201%206%202%204).png)
 
 ### turtle_class_add.py & turtle_complex_add.py
 
