@@ -60,7 +60,7 @@ def market(retn, span=60):
     获取可以交易的品种，基于过去N天的收益率的相关系数矩阵划分品种的关联程度
     Args:
         retn:
-            品种给的收益率数据
+            品种的收益率数据
         span:
             计算相关系数的时间跨度
     Returns:
@@ -107,10 +107,10 @@ if __name__ == '__main__':
         
         high = data_name['high']
         low = data_name['low']
-        High20[name] = high_low(high, span=55) #过去20日最高价
-        Low20[name]=  high_low(low, span=55) #过去20日最低价
-        High10[name] = high_low(high, span=20) #过去10日最高价
-        Low10[name] =  high_low(low, span=20) #过去10日最低价  
+        High20[name] = high_low(high, span=55) #span默认是20，可以设置成55日或20日,得到相应时期内的最高价
+        Low20[name]=  high_low(low, span=55) #过去55日最低价
+        High10[name] = high_low(high, span=20) #过去20日最高价
+        Low10[name] =  high_low(low, span=20) #过去20日最低价  
 
     data_ATR = pd.DataFrame(data_ATR)
     High20 = pd.DataFrame(High20)
@@ -239,22 +239,20 @@ ax2.plot(Drawdown.index, Drawdown, color='c')
 ax2.set_ylabel('Max Drawdown', fontdict={'fontsize':16})
 ax2.fill_between(Drawdown.index, Drawdown, color='c')
 ax2.set_ylim(-1.5, 0)
-#words = '''risk rate:{:8.4f}
-#slippage:{:8d}
-#stop ATRs:{:8d}
-#safe ATRs:{:8d}
-#trail ATRs:{:8d}
-#sharp days:{:8d}
+words = '''risk rate:{:8.4f}
+slippage:{:8d}
+stop ATRs:{:8d}
+safe ATRs:{:8d}
+trail ATRs:{:8d}
+sharp days:{:8d}
 
-words = '''Total return:{:8.2f}
+Total return:{:8.2f}
 Annual return:{:8.2f}
 Volatility:{:8.2f} 
 IR:{:8.2f}
 Max Drawdown:{:8.2f}
-Calmar:{:8.2f}'''.format(
-#Turtle.risk_rate, Turtle.slippage_n, Turtle.stop_n, Turtle.safe_n,
-#Turtle.trail_n, Turtle.sharp_days, 
-Total_return, Ann, Sigma, IR, MaxDD, Calmar)
+Calmar:{:8.2f}'''.format(Turtle.risk_rate, Turtle.slippage_n, Turtle.stop_n, Turtle.safe_n, 
+                         Turtle.trail_n, Turtle.sharp_days, Total_return, Ann, Sigma, IR, MaxDD, Calmar)
 ax2.text(ax2.get_xbound()[0]+650, -1, words, 
          fontsize=14, family='Fira Code', horizontalalignment='right', 
          bbox=dict(boxstyle='square', fc='white'))
