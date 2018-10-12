@@ -28,7 +28,7 @@ class Turtle():
         self.name = name #品种名称
         self.hold = hold #前一交易日品种的持仓量
         self.units = units #当日所有品种的头寸单位
-        self.deal_price = deal_price #开仓交个
+        self.deal_price = deal_price #开仓价格
         self.deal_date = deal_date #开仓日期
         self.open_ = self.Open.loc[date, name] #开盘价
         self.high = self.High.loc[date, name]#最高价
