@@ -8,7 +8,7 @@ Created on Sun Oct  7 01:49:16 2018
 class Turtle():
     '''
     海龟交易系统
-    必须首先建立四个类属性：Open, HIgh, Low, Close，并为此赋值
+    必须首先建立四个类属性：Open, High, Low, Close，并为此赋值
     '''
     
     risk_rate = 0.005 #风险比例
