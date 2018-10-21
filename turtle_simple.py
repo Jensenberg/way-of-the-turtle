@@ -381,7 +381,7 @@ nav = Asset / initial
 Total_return = nav[-1]
 T = len(nav) / 244
 Ann = nav[-1]**(1/T) - 1
-Sigma = nav.std() / (T**(1/2))
+Sigma = nav.pct_change().std() * (T**(1/2))
 IR = Ann / Sigma
 def drawdown(nav):
     dd = []
