@@ -11,6 +11,8 @@
 - **主力合约的迁移和价格连续化**：按新主力合约和旧主力合约在合约迁移日的收盘价的价差进行平移
 - **交易成本**：交易所手续费 + 一个最小变动单位的滑点
 
+![回测曲线](https://github.com/Jensenberg/way-of-the-turtle/blob/master/data/Way_Of_Turtle.png)
+
 ### 3、海龟交易法则（Way of The Turtle)
 
 1. 真实波动幅度（**TR**, True Range）：
